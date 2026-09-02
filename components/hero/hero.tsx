@@ -7,7 +7,7 @@ import { HeroCtas } from "./hero-ctas";
 
 export function Hero(): ReactNode {
   return (
-    <section className="relative flex h-[100svh] w-full items-end overflow-hidden rounded-lg">
+    <section className="relative flex h-[100svh] w-full items-end overflow-hidden">
       <Image
         src="/grains.jpg"
         alt=""
