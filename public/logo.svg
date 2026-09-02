@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 650">
+  <title>Canela — icono minimalista de venado</title>
+  <g fill="none" stroke="#FFFFFF" stroke-width="13" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Cuerno izquierdo + rostro -->
+    <path d="M500 535
+             C500 485 484 445 453 425
+             C431 411 409 408 389 407
+             C351 405 323 391 296 374"/>
+    <path d="M389 407
+             C351 382 332 348 332 307
+             C332 270 344 239 369 214"/>
+    <!-- Cuerno derecho + rostro -->
+    <path d="M500 535
+             C500 485 516 445 547 425
+             C569 411 591 408 611 407
+             C649 405 677 391 704 374"/>
+    <path d="M611 407
+             C649 382 668 348 668 307
+             C668 270 656 239 631 214"/>
+  </g>
+</svg>

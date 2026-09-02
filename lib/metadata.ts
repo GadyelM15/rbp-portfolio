@@ -1,25 +1,25 @@
 import type { Metadata } from "next";
 
 export const siteConfig = {
-  name: "Portfolio",
+  name: "Café Canela",
   description:
-    "A modern, accessible portfolio template built with Next.js, Tailwind CSS, and TypeScript.",
+    "Café, comida y buenos momentos en un solo lugar.",
   url: "https://example.com",
   ogImage: "/og-image.png",
-  creator: "@yourhandle",
+  creator: "@cafecanela",
   authors: [
     {
-      name: "Your Name",
+      name: "Café Canela",
       url: "https://example.com",
     },
   ],
   keywords: [
-    "portfolio",
-    "personal site",
-    "Next.js",
-    "React",
-    "Tailwind CSS",
-    "TypeScript",
+    "café",
+    "cafetería",
+    "restaurant",
+    "café canela",
+    "menú",
+    "coffee",
   ],
 } as const;
 
@@ -50,7 +50,7 @@ export const baseMetadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    locale: "en_US",
+    locale: "es_MX",
     url: siteConfig.url,
     title: siteConfig.name,
     description: siteConfig.description,

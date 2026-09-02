@@ -30,11 +30,10 @@ export function ContactCard(): ReactNode {
             <div className="relative grid gap-8 p-6 sm:gap-10 sm:p-7 md:grid-cols-[1.2fr_1fr] md:items-stretch md:gap-6 md:p-6">
               <div className="flex flex-col gap-5">
                 <h2 className="font-serif text-[2.25rem] font-medium leading-[1.05] tracking-tight text-foreground sm:text-[2.75rem] lg:text-[3.25rem]">
-                  Let&rsquo;s connect
+                  Contáctanos
                 </h2>
-                <p className="max-w-[29ch] text-[18px] leading-[1.4] tracking-tight text-foreground/65 sm:text-[22px] mb-6">
-                  I&rsquo;m always open to discussing new projects, creative
-                  ideas, or opportunities to be part of your visions. Just reach out!
+                <p className="max-w-[36ch] text-[18px] leading-[1.4] tracking-tight text-foreground/65 sm:text-[22px] mb-6">
+                  ¿Pedido especial, reservar un espacio o simplemente saludar? Escríbenos y con gusto te atendemos.
                 </p>
                 <ContactCardCtas />
               </div>
@@ -59,10 +58,10 @@ export function ContactCard(): ReactNode {
                 </div>
                 <div className="flex flex-col items-center gap-1 text-center">
                   <p className="text-[13px] tracking-tight text-foreground/70">
-                    2026 &copy; Built with Next.js
+                    2026 &copy; Café Canela
                   </p>
                   <p className="text-[12px] tracking-tight text-foreground/45">
-                    By React Bits Pro
+                    Hecho con ♥ y mucho café
                   </p>
                 </div>
               </div>

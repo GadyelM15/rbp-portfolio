@@ -1,54 +1,51 @@
+import Image from "next/image";
 import type { ReactNode } from "react";
 
+import { FadeIn } from "@/components/ui/motion-primitives";
+import { ScrollVelocity } from "@/components/ui/scroll-velocity";
 import { HeroCtas } from "./hero-ctas";
-import { FadeIn, ScaleUnblur } from "@/components/ui/motion-primitives";
-import { PortraitMorph } from "./portrait-morph";
-
-const PORTRAIT_SRC = "/josh.webp";
-const PORTRAIT_HOVER_SRC = "/josh_wave.webp";
 
 export function Hero(): ReactNode {
   return (
-    <section className="relative w-full">
-      <div className="mx-auto w-full max-w-275 px-6 pt-44 pb-24 sm:px-10 sm:pt-56 sm:pb-32">
-        <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2 md:gap-8">
-          <FadeIn className="flex flex-col gap-4">
-            <p className="text-[20px] leading-tight tracking-tight font-medium text-foreground">
-              Hey
-              <span aria-hidden="true" className="mx-0.5">
-                👋
-              </span>
-              , I&rsquo;m Josh
-            </p>
+    <section className="relative flex h-[100svh] w-full items-end overflow-hidden">
+      <Image
+        src="/coffeegrains.avif"
+        alt=""
+        fill
+        priority
+        className="object-cover"
+        sizes="100vw"
+      />
 
-            <h1 className="text-[2.75rem] font-medium leading-[1.05] tracking-tight text-foreground md:text-[2.5rem] lg:text-[3.65rem]">
-              <span className="block whitespace-nowrap">
-                Design engineer &
-              </span>
-              <span className="block whitespace-nowrap">AI enthusiast</span>
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent" />
+
+      <div
+        aria-hidden
+        className="pointer-events-none absolute top-1/2 left-1/2 h-[60vmin] w-[60vmin] -translate-x-1/2 -translate-y-1/2 bg-contain bg-center bg-no-repeat opacity-25"
+        style={{ backgroundImage: "url(/logo.svg)" }}
+      />
+
+      <div className="relative z-10 w-full px-6 pb-10 sm:px-10 sm:pb-16 md:pb-20">
+        <FadeIn className="mx-auto flex max-w-275 flex-col gap-6">
+          <div className="flex flex-col gap-3">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/50 sm:text-sm">
+              Restaurant & Cafetería
+            </p>
+            <h1 className="font-serif text-[clamp(3.5rem,10vw,8rem)] leading-[0.9] font-medium tracking-tight text-white">
+              Café
+              <br />
+              Canela
             </h1>
-
-            <p className="max-w-[34ch] text-[22px] leading-[1.4] tracking-tight text-foreground/65">
-              Independent engineer focused on interfaces that feel calm,
-              considered, and quietly fast.
-            </p>
-
-            <HeroCtas />
-          </FadeIn>
-
-          <ScaleUnblur className="flex justify-stretch md:justify-end">
-            <div className="relative aspect-square w-full md:max-w-105 overflow-hidden rounded-4xl border border-foreground/8 bg-background p-1.5 shadow-sm">
-              <div className="relative h-full w-full overflow-hidden rounded-[1.6rem]">
-                <PortraitMorph
-                  srcA={PORTRAIT_SRC}
-                  srcB={PORTRAIT_HOVER_SRC}
-                  alt="Josh portrait"
-                />
-              </div>
-            </div>
-          </ScaleUnblur>
-        </div>
+            <ScrollVelocity
+              texts={["Café, comida y buenos momentos en un solo lugar"]}
+              velocity={20}
+              numCopies={6}
+            />
+          </div>
+          <HeroCtas />
+        </FadeIn>
       </div>
+      
     </section>
   );
 }

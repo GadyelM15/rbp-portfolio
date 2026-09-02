@@ -1,40 +1,26 @@
-"use client";
-
 import { ArrowRight } from "lucide-react";
-import { LayoutGroup, motion } from "motion/react";
 import Link from "next/link";
 import type { ReactNode } from "react";
 
-import { ContactButton } from "@/components/contact/contact-button";
-
-const EASE = [0.22, 1, 0.36, 1] as const;
-
 export function HeroCtas(): ReactNode {
   return (
-    <LayoutGroup>
-      <motion.div
-        layout
-        transition={{ layout: { duration: 0.55, ease: EASE } }}
-        className="mt-2 flex flex-wrap items-center gap-3"
+    <div className="flex flex-wrap items-center gap-3">
+      <Link
+        href="/projects"
+        className="focus-ring group inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-medium text-black transition-opacity hover:opacity-90"
       >
-        <ContactButton />
-
-        <motion.div
-          layout
-          transition={{ layout: { duration: 0.55, ease: EASE } }}
-        >
-          <Link
-            href="/projects"
-            className="border border-foreground/5 focus-ring group inline-flex cursor-pointer items-center gap-2 rounded-xl bg-background px-5 py-2.5 text-sm font-medium text-foreground shadow-2xl transition-colors hover:bg-foreground/4"
-          >
-            View My Work
-            <ArrowRight
-              className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5"
-              aria-hidden="true"
-            />
-          </Link>
-        </motion.div>
-      </motion.div>
-    </LayoutGroup>
+        Ver Menú
+        <ArrowRight
+          className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5"
+          aria-hidden="true"
+        />
+      </Link>
+      <Link
+        href="/about"
+        className="focus-ring inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-sm font-medium text-white backdrop-blur-sm transition-colors hover:bg-white/10"
+      >
+        Nuestra Historia
+      </Link>
+    </div>
   );
 }

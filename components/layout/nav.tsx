@@ -21,8 +21,8 @@ type NavItem = {
 
 const NAV_ITEMS: readonly NavItem[] = [
   { label: "Home", href: "/" },
-  { label: "Projects", href: "/projects" },
-  { label: "About", href: "/about" },
+  { label: "Menú", href: "/projects" },
+  { label: "Nosotros", href: "/about" },
 ];
 
 function useIsMounted(): boolean {
