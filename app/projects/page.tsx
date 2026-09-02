@@ -1,9 +1,11 @@
 import Image from "next/image";
 import { Menu } from "@/components/menu/menu";
 import { FadeIn } from "@/components/ui/motion-primitives";
+import { ScrollExpand } from "@/components/ui/scroll-expand";
 import { createMetadata } from "@/lib/metadata";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import { Featured } from "@/components/home/featured";
 
 export const metadata: Metadata = createMetadata({
   title: "Menú",
@@ -30,11 +32,18 @@ export default function ProjectsPage(): ReactNode {
               Nuestro Menú
             </h1>
             <p className="max-w-[36ch] text-base text-white/60 sm:text-lg">
-              Café de especialidad, bebidas artesanales y platillos preparados con ingredientes frescos.
+              Café de especialidad, bebidas artesanales y platillos preparados
+              con ingredientes frescos.
             </p>
           </FadeIn>
         </div>
       </section>
+      <ScrollExpand
+        src="/coffee5.avif"
+        initialText="Cada detalle"
+        finalText="Hace la diferencia"
+      />
+      <Featured />
       <Menu />
       <div className="h-16 sm:h-24" />
     </main>

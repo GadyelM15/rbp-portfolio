@@ -7,9 +7,9 @@ import { HeroCtas } from "./hero-ctas";
 
 export function Hero(): ReactNode {
   return (
-    <section className="relative flex h-[100svh] w-full items-end overflow-hidden">
+    <section className="relative flex h-[100svh] w-full items-end overflow-hidden rounded-lg">
       <Image
-        src="/coffeegrains.avif"
+        src="/grains.jpg"
         alt=""
         fill
         priority
@@ -21,7 +21,7 @@ export function Hero(): ReactNode {
 
       <div
         aria-hidden
-        className="pointer-events-none absolute top-1/2 left-1/2 h-[60vmin] w-[60vmin] -translate-x-1/2 -translate-y-1/2 bg-contain bg-center bg-no-repeat opacity-25"
+        className="pointer-events-none absolute top-1/2 left-1/2 h-[60vmin] w-[60vmin] -translate-x-1/2 -translate-y-1/2 bg-contain bg-center bg-no-repeat opacity-90"
         style={{ backgroundImage: "url(/logo.svg)" }}
       />
 

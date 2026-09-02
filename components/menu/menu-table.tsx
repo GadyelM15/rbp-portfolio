@@ -52,6 +52,9 @@ export function MenuTable({ category }: { category: MenuCategory }): ReactNode {
             <TableCell align="right" sx={{ ...cellSx, fontWeight: 600 }}>
               Grande
             </TableCell>
+            <TableCell align="right" sx={{ ...cellSx, fontWeight: 600 }}>
+              Calorías
+            </TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -73,6 +76,9 @@ export function MenuTable({ category }: { category: MenuCategory }): ReactNode {
               </TableCell>
               <TableCell align="right" sx={cellSx}>
                 {formatPrice(item.grande)}
+              </TableCell>
+              <TableCell align="right" sx={cellSx}>
+                {item.calories}
               </TableCell>
             </TableRow>
           ))}

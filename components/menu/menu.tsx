@@ -6,7 +6,7 @@ import { MenuList } from "./menu-list";
 
 export function Menu(): ReactNode {
   return (
-    <section className="relative w-full py-16 sm:py-24">
+    <section className="relative w-full py-8 sm:py-12">
       <div className="mx-auto flex w-full max-w-275 flex-col gap-16 px-6 sm:gap-20 sm:px-10">
         {MENU_CATEGORIES.map((category) => (
           <FadeIn key={category.id} className="flex flex-col gap-5">

@@ -21,6 +21,7 @@ export function MenuList({
           <span className="w-10 text-right sm:w-14">Ch</span>
           <span className="w-10 text-right sm:w-14">Med</span>
           <span className="w-10 text-right sm:w-14">Gr</span>
+          <span className="w-10 text-right sm:w-14">Cal</span>
         </div>
       )}
       <div className="divide-y divide-foreground/5">
@@ -47,6 +48,9 @@ export function MenuList({
                 </span>
                 <span className="w-10 text-right text-[13px] text-foreground/70 sm:w-14 sm:text-sm">
                   {formatPrice(item.grande)}
+                </span>
+                <span className="w-10 text-right text-[13px] text-foreground/70 sm:w-14 sm:text-sm">
+                  {item.calories}
                 </span>
               </div>
             ) : (
