@@ -17,7 +17,7 @@ export function Hero(): ReactNode {
         sizes="100vw"
       />
 
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/100 via-black/80 to-transparent" />
 
       <div
         aria-hidden
