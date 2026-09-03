@@ -257,6 +257,7 @@ export function Checkout(): ReactNode {
                       onChange={updateField("phone")}
                       error={Boolean(errors.phone)}
                       helperText={errors.phone}
+                      type="number"
                       fullWidth
                     />
                   </Stack>
@@ -287,11 +288,13 @@ export function Checkout(): ReactNode {
                       error={Boolean(errors.cardNumber)}
                       helperText={
                         errors.cardNumber ??
-                        "Prueba con cualquier número de 13 a 19 dígitos."
+                        "Digitos: " + form.cardNumber.length
                       }
                       slotProps={{ htmlInput: { inputMode: "numeric" } }}
+                      type="number"
                       fullWidth
                     />
+
                     <Stack direction={{ xs: "column", sm: "row" }} spacing={2}>
                       <TextField
                         label="Expira"
@@ -303,7 +306,7 @@ export function Checkout(): ReactNode {
                         fullWidth
                       />
                       <TextField
-                        label="CVC"
+                        label="CVV"
                         value={form.cvc}
                         onChange={updateField("cvc")}
                         error={Boolean(errors.cvc)}
