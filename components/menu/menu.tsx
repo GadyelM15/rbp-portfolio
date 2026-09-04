@@ -57,7 +57,10 @@ export function Menu(): ReactNode {
   const [orderMessage, setOrderMessage] = useState("");
   const [open, setOpen] = useState(false);
   const handleClose = (event?: React.SyntheticEvent | Event, reason?: string) => {
-    if (reason === 'clickaway' || event === undefined || event === null) {
+    if (reason === 'clickaway') {
+      if (event) {
+        event.preventDefault();
+      }
       return;
     }
     setOpen(false);

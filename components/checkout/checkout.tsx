@@ -303,7 +303,6 @@ export function Checkout(): ReactNode {
                         onChange={updateField("expiry")}
                         error={Boolean(errors.expiry)}
                         helperText={errors.expiry}
-                        type="number"
                         fullWidth
                       />
                       <TextField
