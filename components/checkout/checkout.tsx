@@ -163,8 +163,7 @@ export function Checkout(): ReactNode {
             </Typography>
             <Alert severity="success">{paymentMessage}</Alert>
             <Typography color="text.secondary">
-              El pedido pendiente se limpió de este navegador. Ya puedes hacer
-              otro pedido.
+              Pedido Pagado con éxito. Ya puedes hacer otro pedido.
             </Typography>
             <Button variant="contained" onClick={() => router.push("/")}>
               Ir a inicio
@@ -257,6 +256,7 @@ export function Checkout(): ReactNode {
                       onChange={updateField("phone")}
                       error={Boolean(errors.phone)}
                       helperText={errors.phone}
+                      slotProps={{ htmlInput: { inputMode: "numeric" } }}
                       type="number"
                       fullWidth
                     />
@@ -303,6 +303,7 @@ export function Checkout(): ReactNode {
                         onChange={updateField("expiry")}
                         error={Boolean(errors.expiry)}
                         helperText={errors.expiry}
+                        type="number"
                         fullWidth
                       />
                       <TextField
@@ -312,6 +313,7 @@ export function Checkout(): ReactNode {
                         error={Boolean(errors.cvc)}
                         helperText={errors.cvc}
                         slotProps={{ htmlInput: { inputMode: "numeric" } }}
+                        type="number"
                         fullWidth
                       />
                     </Stack>

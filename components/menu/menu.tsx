@@ -4,6 +4,8 @@ import { ShoppingBag, Trash2, X } from "lucide-react";
 import { useRouter } from "next/navigation";
 import type { ReactNode } from "react";
 import { useEffect, useState, useSyncExternalStore } from "react";
+import Snackbar from '@mui/material/Snackbar';
+import Alert from '@mui/material/Alert';
 
 import { FadeIn } from "@/components/ui/motion-primitives";
 import {
@@ -53,12 +55,20 @@ export function Menu(): ReactNode {
     "idle" | "sending" | "success" | "error"
   >("idle");
   const [orderMessage, setOrderMessage] = useState("");
+  const [open, setOpen] = useState(false);
+  const handleClose = (event?: React.SyntheticEvent | Event, reason?: string) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    setOpen(false);
+  };
 
   const addItem = (item: MenuItem, size: MenuSize, quantity: number): void => {
     if (pendingOrder) {
       setIsCartOpen(true);
       return;
     }
+    setOpen(true);
 
     const unitPrice = item[size];
     if (unitPrice === null) return;
@@ -138,6 +148,16 @@ export function Menu(): ReactNode {
 
   return (
     <section id="menu" className="relative w-full py-8 sm:py-12">
+      <Snackbar open={open} autoHideDuration={1500} onClose={handleClose}>
+        <Alert
+          onClose={handleClose}
+          severity="success"
+          variant="standard"
+          sx={{ width: '50%' }}
+        >
+          Agregado!
+        </Alert>
+      </Snackbar>
       <div className="mx-auto w-full max-w-275 px-6 sm:px-10">
         <div className="flex flex-col gap-16 sm:gap-20">
           {MENU_CATEGORIES.map((category) => (

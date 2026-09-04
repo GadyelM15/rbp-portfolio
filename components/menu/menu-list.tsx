@@ -44,7 +44,6 @@ function MenuItemCard({
   const selectedPrice = item[selectedSize];
   const needsSize = availableSizes.length > 1;
   const image = item.image ?? categoryImage;
-
   return (
     <article className="border-foreground/5 group relative isolate flex min-h-[17.5rem] flex-col justify-between overflow-hidden rounded-2xl border bg-neutral-950 p-3 text-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-white/20 sm:min-h-[20rem] sm:p-5">
       <Image
